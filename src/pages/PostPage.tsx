@@ -23,7 +23,7 @@ export default function PostPage() {
   }
 
   return (
-    <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-16 md:pt-40 animate-fade-in-up">
+    <article className="max-w-4xl mx-auto px-4 sm:px-6 pt-32 pb-16 md:pt-36 animate-fade-in-up">
       {/* Post Header */}
       <header className="mb-12 text-center">
         {post.frontmatter.category && (
@@ -53,7 +53,7 @@ export default function PostPage() {
           <img
             src={post.frontmatter.imageUrl}
             alt={post.frontmatter.title}
-            className="w-full h-auto object-cover max-h-[500px]"
+            className="w-full h-auto object-cover max-h-[300px] md:max-h-[400px] aspect-video sm:aspect-auto"
           />
         </div>
       )}

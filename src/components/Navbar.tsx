@@ -30,14 +30,14 @@ export default function Navbar() {
     <nav
       id="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-        ? 'glass shadow-lg shadow-brand-deep/50'
+        ? 'bg-slate-950/80 backdrop-blur-md'
         : 'bg-transparent'
         }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between md:justify-center">
           {/* Logo */}
-          <Link to="/" id="logo" className="group flex items-center gap-2">
+          <Link to="/" id="logo" className="group flex items-center gap-2 md:hidden">
             {/* Icon mark */}
             <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-highlight to-brand-highlight-300 shadow-md shadow-brand-highlight/25 transition-transform duration-300 group-hover:scale-110">
               <svg

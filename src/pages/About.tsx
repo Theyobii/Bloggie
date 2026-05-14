@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <article className="mx-auto max-w-4xl px-4 sm:px-6 pt-32 pb-16 md:pt-40 animate-fade-in-up">
+    <article className="mx-auto max-w-4xl px-4 sm:px-6 pt-48 pb-16 md:pt-56 animate-fade-in-up">
       <div className="prose prose-lg mx-auto">
         <h1 className="text-center md:text-left">Sobre Bloggie</h1>
         <p className="lead">
