@@ -39,7 +39,7 @@ export default function Footer() {
               </span>
             </a>
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-brand-pastel-500">
-              el blog por excelencia para la informacion
+              El blog para la gerencia, la tecnologia y el desarrollo de proyectos
             </p>
 
             {/* Social icons */}
