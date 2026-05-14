@@ -1,7 +1,7 @@
 ---
 title: "Entornos de Alto Rendimiento"
 excerpt: "Cómo la configuración de los entornos de trabajo influye directamente en la eficiencia de un equipo de desarrollo."
-date: "2026-05-15"
+date: "2026-05-13"
 author: "Theyobii"
 authorImage: "/authors/theyobi.jpg"
 imageUrl: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97?auto=format&fit=crop&q=80&w=800"

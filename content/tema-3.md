@@ -1,7 +1,7 @@
 ---
 title: "Stack Tecnológico: ¿Por qué TypeScript y pnpm son el Estándar?"
 excerpt: "Evaluando la estabilidad y la velocidad de entrega desde la perspectiva de la gerencia técnica."
-date: "2026-05-16"
+date: "2026-05-13"
 authorImage: "/authors/theyobi.jpg"
 author: "Theyobii"
 imageUrl: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?auto=format&fit=crop&q=80&w=800"

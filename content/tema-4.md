@@ -1,7 +1,7 @@
 ---
 title: "Simulación de Procesos en IT"
 excerpt: "Cómo el modelado matemático y la simulación ayudan a gestionar la carga de trabajo en áreas de tecnología."
-date: "2026-05-17"  
+date: "2026-05-13"
 author: "Theyobii"
 authorImage: "/authors/theyobi.jpg"
 imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=1000"

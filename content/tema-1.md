@@ -1,7 +1,7 @@
 ---
 title: "Gestión del Ciclo de Vida: El Valor de la Infraestructura Legacy"
 excerpt: "Por qué la gerencia de equipos debe mirar más allá de la obsolescencia programada y apostar por la robustez."
-date: "2026-05-14"
+date: "2026-05-13"
 author: "Theyobii"
 authorImage: "/authors/theyobi.jpg"
 imageUrl: "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&q=80&w=800"
