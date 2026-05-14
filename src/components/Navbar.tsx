@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 const navLinks = [
-  { label: 'Inicio', href: '#' },
-  { label: 'Blog', href: '#posts' },
-  { label: 'Sobre Nosotros', href: '#about' },
+  { label: 'Inicio', href: '/' },
+  { label: 'Blog', href: '/#posts' },
+  { label: 'Sobre Nosotros', href: '/about' },
 ];
 
 export default function Navbar() {
@@ -29,14 +30,14 @@ export default function Navbar() {
     <nav
       id="navbar"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'glass shadow-lg shadow-brand-deep/50'
-          : 'bg-transparent'
+        ? 'glass shadow-lg shadow-brand-deep/50'
+        : 'bg-transparent'
         }`}
     >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <a href="#" id="logo" className="group flex items-center gap-2">
+          <Link to="/" id="logo" className="group flex items-center gap-2">
             {/* Icon mark */}
             <div className="relative flex h-9 w-9 items-center justify-center rounded-lg bg-gradient-to-br from-brand-highlight to-brand-highlight-300 shadow-md shadow-brand-highlight/25 transition-transform duration-300 group-hover:scale-110">
               <svg
@@ -56,10 +57,10 @@ export default function Navbar() {
             <span className="text-2xl font-bold font-display text-gradient-brand tracking-tight">
               Bloggie
             </span>
-          </a>
+          </Link>
 
           {/* Desktop links */}
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
               <a
                 key={link.label}
@@ -114,13 +115,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#subscribe"
-            onClick={() => setMobileOpen(false)}
-            className="mt-2 block rounded-full bg-gradient-to-r from-brand-highlight to-brand-highlight-300 px-5 py-2.5 text-center text-sm font-semibold text-white shadow-md shadow-brand-highlight/25"
-          >
-            Suscribirse
-          </a>
         </div>
       </div>
     </nav>

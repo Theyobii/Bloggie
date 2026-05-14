@@ -1,11 +1,12 @@
 import PostCard from '../components/PostCard';
-import { mockPosts } from '../data/posts';
+import { getAllPosts } from '../utils/markdown-parser';
 
 export default function Home() {
+  const posts = getAllPosts();
   return (
     <>
       {/* ═══════════════════ HERO SECTION ═══════════════════ */}
-      <section id="hero" className="relative w-full overflow-hidden px-4 sm:px-8 lg:px-12 pt-32 pb-24 md:pt-48 md:pb-36 flex flex-col items-center">
+      <section id="hero" className="relative w-full overflow-hidden px-4 sm:px-8 lg:px-12 pt-48 pb-32 md:pt-64 md:pb-56 flex flex-col items-center">
         {/* Decorative elements */}
         <div className="pointer-events-none absolute inset-0 -z-10">
           {/* Grid pattern */}
@@ -51,12 +52,12 @@ export default function Home() {
       <section id="posts" className="relative w-full px-4 sm:px-8 lg:px-12 pt-16 pb-32 md:pt-24 md:pb-48 flex flex-col items-center">
         {/* Section header */}
         <div className="w-full max-w-7xl mx-auto">
-          <div className="flex flex-col items-start gap-6 mb-6 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex flex-col items-start gap-6 mb-8 sm:flex-row sm:items-center sm:justify-between">
             <div>
-              <h2 className="text-3xl font-bold font-display text-brand-pastel-50 sm:text-4xl">
+              <h2 className="text-3xl mb-4 font-bold font-display text-brand-pastel-50 sm:text-4xl">
                 Últimos Artículos
               </h2>
-              <p className="mt-2 text-brand-pastel-500">
+              <p className="mb-2 mt-2 text-brand-pastel-500">
                 Las publicaciones más recientes de nuestra comunidad
               </p>
             </div>
@@ -64,8 +65,8 @@ export default function Home() {
 
           {/* Post grid */}
           <div className="stagger mt-12 grid w-full grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:gap-10">
-            {mockPosts.map((post, i) => (
-              <PostCard key={post.id} post={post} index={i} />
+            {posts.map((post, i) => (
+              <PostCard key={post.slug} post={post} index={i} />
             ))}
           </div>
         </div>

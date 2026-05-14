@@ -39,6 +39,70 @@ const config: Config = {
         sans: ['Inter', 'system-ui', 'sans-serif'],
         display: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
       },
+      typography: (theme: any) => ({
+        DEFAULT: {
+          css: {
+            color: theme('colors.brand.pastel.400'),
+            '[class~="lead"]': {
+              color: theme('colors.brand.pastel.300'),
+            },
+            a: {
+              color: theme('colors.brand.highlight.DEFAULT'),
+              '&:hover': {
+                color: theme('colors.brand.highlight.50'),
+              },
+            },
+            strong: {
+              color: theme('colors.brand.pastel.100'),
+            },
+            'ol > li::marker': {
+              color: theme('colors.brand.pastel.500'),
+            },
+            'ul > li::marker': {
+              color: theme('colors.brand.pastel.500'),
+            },
+            hr: {
+              borderColor: theme('colors.brand.deep.300'),
+            },
+            blockquote: {
+              color: theme('colors.brand.pastel.200'),
+              borderLeftColor: theme('colors.brand.highlight.DEFAULT'),
+            },
+            h1: {
+              color: theme('colors.brand.highlight.DEFAULT'),
+            },
+            h2: {
+              color: theme('colors.brand.highlight.DEFAULT'),
+            },
+            h3: {
+              color: theme('colors.brand.highlight.DEFAULT'),
+            },
+            h4: {
+              color: theme('colors.brand.highlight.DEFAULT'),
+            },
+            'figure figcaption': {
+              color: theme('colors.brand.pastel.500'),
+            },
+            code: {
+              color: theme('colors.brand.pastel.100'),
+            },
+            'a code': {
+              color: theme('colors.brand.pastel.100'),
+            },
+            pre: {
+              color: theme('colors.brand.pastel.200'),
+              backgroundColor: theme('colors.brand.deep.50'),
+            },
+            thead: {
+              color: theme('colors.brand.pastel.100'),
+              borderBottomColor: theme('colors.brand.deep.300'),
+            },
+            'tbody tr': {
+              borderBottomColor: theme('colors.brand.deep.300'),
+            },
+          },
+        },
+      }),
     },
   },
   plugins: [],

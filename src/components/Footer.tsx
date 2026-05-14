@@ -6,15 +6,15 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="flex relative mt-32 md:mt-48 border-t border-brand-deep-400/50">
+    <footer id="footer" className="flex relative mt-16 md:mt-24 border-t border-brand-deep-400/50">
       {/* Glow accent */}
       <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-highlight/40 to-transparent" />
 
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-10 md:py-12">
+        <div className="flex flex-col md:flex-row gap-12 md:gap-24 pl-2 md:pl-8">
           {/* Brand column */}
-          <div className="lg:col-span-1">
-            <a href="#" className="inline-flex items-center gap-2">
+          <div className="md:max-w-sm">
+            <a href="#" className="inline-flex items-center gap-3">
               <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-brand-highlight to-brand-highlight-300">
                 <svg
                   viewBox="0 0 24 24"
