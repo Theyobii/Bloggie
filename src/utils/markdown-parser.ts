@@ -5,6 +5,7 @@ export interface PostFrontmatter {
   excerpt: string;
   date: string;
   author: string;
+  authorImage?: string;
   imageUrl?: string;
   category?: string;
 }

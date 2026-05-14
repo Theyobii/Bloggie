@@ -167,6 +167,7 @@ body {
 
 /* Ensure v4 prose works nicely if plugin overrides are not picked up */
 .prose {
+  font-family: var(--font-sans);
   --tw-prose-body: var(--color-brand-pastel-400);
   --tw-prose-headings: var(--color-brand-highlight);
   --tw-prose-lead: var(--color-brand-pastel-300);
@@ -183,4 +184,9 @@ body {
   --tw-prose-pre-bg: var(--color-brand-deep-50);
   --tw-prose-th-borders: var(--color-brand-deep-300);
   --tw-prose-td-borders: var(--color-brand-deep-300);
+}
+
+.prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+  font-family: var(--font-display);
+  letter-spacing: -0.02em;
 }

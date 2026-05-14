@@ -35,10 +35,19 @@ export default function PostPage() {
           {post.frontmatter.title}
         </h1>
         <div className="flex items-center justify-center space-x-4 text-brand-pastel-400 text-sm">
-          <span>{post.frontmatter.author}</span>
+          <div className="flex items-center gap-3">
+            {post.frontmatter.authorImage && (
+              <img
+                src={post.frontmatter.authorImage}
+                alt={post.frontmatter.author}
+                className="h-8 w-8 rounded-full object-cover border border-brand-pastel-500/20"
+              />
+            )}
+            <span className="font-medium text-brand-pastel-100">{post.frontmatter.author}</span>
+          </div>
           <span>•</span>
           <time dateTime={post.frontmatter.date}>
-            {new Date(post.frontmatter.date).toLocaleDateString('en-US', {
+            {new Date(post.frontmatter.date).toLocaleDateString('es-ES', {
               year: 'numeric',
               month: 'long',
               day: 'numeric'

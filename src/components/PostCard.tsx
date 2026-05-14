@@ -9,7 +9,7 @@ interface PostCardProps {
 
 
 export default function PostCard({ post, index }: PostCardProps) {
-  const { title, excerpt, date, author } = post.frontmatter;
+  const { title, excerpt, date, author, authorImage, imageUrl } = post.frontmatter;
 
   const formattedDate = new Intl.DateTimeFormat('es-ES', {
     year: 'numeric',
@@ -24,9 +24,21 @@ export default function PostCard({ post, index }: PostCardProps) {
       style={{ animationDelay: `${index * 0.1}s` }}
     >
       {/* Top accent bar */}
-      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-highlight/0 to-transparent transition-all duration-500 group-hover:via-brand-highlight/50" />
+      <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-brand-highlight/0 to-transparent transition-all duration-500 group-hover:via-brand-highlight/50 z-10" />
 
-      <div className="flex flex-1 flex-col p-6 sm:p-8">
+      {/* Post Image */}
+      {imageUrl && (
+        <div className="relative h-48 w-full overflow-hidden rounded-t-2xl">
+          <img
+            src={imageUrl}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-brand-deep/80 to-transparent opacity-60" />
+        </div>
+      )}
+
+      <div className="flex flex-1 flex-col p-6">
 
 
         {/* Title */}
@@ -44,12 +56,16 @@ export default function PostCard({ post, index }: PostCardProps) {
         {/* Meta row */}
         <div className="mt-6 flex items-center justify-between border-t border-brand-deep-400/30 pt-4">
           <div className="flex items-center gap-2">
-            {/* Avatar placeholder */}
-            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-brand-highlight/30 to-brand-highlight-400/30 text-[10px] font-bold text-brand-pastel-100">
-              {author
-                .split(' ')
-                .map((n: string) => n[0])
-                .join('')}
+            {/* Avatar placeholder / Image */}
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-br from-brand-highlight/30 to-brand-highlight-400/30 text-[10px] font-bold text-brand-pastel-100 overflow-hidden">
+              {authorImage ? (
+                <img src={authorImage} alt={author} className="h-full w-full object-cover" />
+              ) : (
+                author
+                  .split(' ')
+                  .map((n: string) => n[0])
+                  .join('')
+              )}
             </div>
             <span className="text-xs font-medium text-brand-pastel-500">
               {author}

@@ -43,6 +43,7 @@ const config: Config = {
         DEFAULT: {
           css: {
             color: theme('colors.brand.pastel.400'),
+            fontFamily: theme('fontFamily.sans').join(', '),
             '[class~="lead"]': {
               color: theme('colors.brand.pastel.300'),
             },
@@ -70,15 +71,23 @@ const config: Config = {
             },
             h1: {
               color: theme('colors.brand.highlight.DEFAULT'),
+              fontFamily: theme('fontFamily.display').join(', '),
+              letterSpacing: '-0.02em',
             },
             h2: {
               color: theme('colors.brand.highlight.DEFAULT'),
+              fontFamily: theme('fontFamily.display').join(', '),
+              letterSpacing: '-0.02em',
             },
             h3: {
               color: theme('colors.brand.highlight.DEFAULT'),
+              fontFamily: theme('fontFamily.display').join(', '),
+              letterSpacing: '-0.02em',
             },
             h4: {
               color: theme('colors.brand.highlight.DEFAULT'),
+              fontFamily: theme('fontFamily.display').join(', '),
+              letterSpacing: '-0.02em',
             },
             'figure figcaption': {
               color: theme('colors.brand.pastel.500'),
