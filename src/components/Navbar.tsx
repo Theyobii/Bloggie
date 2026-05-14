@@ -62,15 +62,14 @@ export default function Navbar() {
           {/* Desktop links */}
           <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.label}
-                href={link.href}
+                to={link.href}
                 className="relative px-4 py-2 text-sm font-medium text-brand-pastel-500 transition-colors duration-200 hover:text-brand-pastel rounded-lg hover:bg-brand-deep-300/50"
               >
                 {link.label}
-              </a>
+              </Link>
             ))}
-
           </div>
 
           {/* Mobile hamburger */}
@@ -106,14 +105,14 @@ export default function Navbar() {
       >
         <div className="glass mx-4 mb-4 rounded-xl p-4 space-y-1">
           {navLinks.map((link) => (
-            <a
+            <Link
               key={link.label}
-              href={link.href}
+              to={link.href}
               onClick={() => setMobileOpen(false)}
               className="block rounded-lg px-4 py-2.5 text-sm font-medium text-brand-pastel-500 transition-colors hover:bg-brand-deep-300/50 hover:text-brand-pastel"
             >
               {link.label}
-            </a>
+            </Link>
           ))}
         </div>
       </div>
