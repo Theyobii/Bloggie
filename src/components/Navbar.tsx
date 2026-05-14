@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const navLinks = [
   { label: 'Inicio', href: '/' },
   { label: 'Blog', href: '/#posts' },
-  { label: 'Sobre Nosotros', href: '/about' },
+  { label: 'About', href: '/about' },
 ];
 
 export default function Navbar() {
